@@ -7,18 +7,18 @@
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
     grey: #6c7086;
-    width: 1800;
-    font: "JetBrainsMono Nerd Font 48";
+    width: 900;
+    font: "JetBrainsMono Nerd Font 36";
 }
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
     text-color:       inherit;
-    font: "JetBrainsMono Nerd Font 36";
+    font: "JetBrainsMono Nerd Font 26";
 }
 
 window {
-    height: 1200px;
+    height: 700px;
     border: 5px;
     border-color: #fff;
     border-radius: 75px;
@@ -39,7 +39,7 @@ inputbar {
 
 prompt {
     background-color: @blue;
-    padding: 6px;
+    padding: 10px;
     text-color: @bg-col;
     border-radius: 3px;
     margin: 20px 0px 0px 20px;
@@ -51,7 +51,7 @@ textbox-prompt-colon {
 }
 
 entry {
-    padding: 6px;
+    padding: 10px;
     margin: 20px 0px 0px 10px;
     text-color: @fg-col;
     background-color: @bg-col;
@@ -70,11 +70,11 @@ element {
     padding: 5px;
     background-color: @bg-col;
     text-color: @fg-col;
-    font: "JetBrainsMono Nerd Font 24";  /* Adjust the size as needed */
+    font: "JetBrainsMono Nerd Font 36";
 }
 
 element-icon {
-    size: 70px;
+    size: 40px;
     margin: 5px 10px 0px 0px;
 }
 

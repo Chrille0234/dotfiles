@@ -1,6 +1,6 @@
 function ColorMyPencils(color)
 	color = color or "rose-pine"
-	vim.cmd.colorscheme("rose-pine")
+	vim.cmd.colorscheme(color)
 
 end
 
@@ -22,14 +22,11 @@ return {
   },
   {
     "slugbyte/lackluster.nvim",
+    config = function ()
+      ColorMyPencils()
+    end
   },
   {
-    "vague2k/vague.nvim"
-  },
-  {
-    "killitar/obscure.nvim"
-  },
-  {
-    "sho-87/kanagawa-paper.nvim"
+    "bluz71/vim-moonfly-colors"
   }
 }
