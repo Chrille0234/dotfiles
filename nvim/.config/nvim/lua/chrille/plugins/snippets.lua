@@ -5,6 +5,9 @@ return {
   -- install jsregexp (optional!).
   build = "make install_jsregexp",
 
+  -- Load LuaSnip when entering insert mode
+  event = "InsertEnter",
+
   config = function ()
     local ls = require("luasnip")
 
@@ -13,7 +16,7 @@ return {
     require("chrille.plugins.snippets.php")
     require("chrille.plugins.snippets.templ")
 
-    vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
+    vim.keymap.set({"i", "s"}, "<C-K>", function() ls.expand() end, {silent = true})
     vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
     vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
 
