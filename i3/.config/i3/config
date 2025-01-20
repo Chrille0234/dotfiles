@@ -24,6 +24,7 @@ font pango:meslo LGM Nerd Font 10
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xinput set-prop "ASUE1A01:00 04F3:31D4 Touchpad" "libinput Natural Scrolling Enabled" 1
 exec --no-startup-id brightnessctl set 80%
+exec --no-startup-id xsetroot -cursor_name left_ptr
 
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+space exec rofi -show window
