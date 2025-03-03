@@ -13,5 +13,9 @@ vim.keymap.set("n", "gd", function ()
   end, 10)
 end)
 
+vim.keymap.set("n", "<leader>cp", function()
+  vim.cmd("CopilotChatOpen")
+end)
+
 
 vim.api.nvim_set_keymap('n', '<Leader>tcc', '<cmd>lua Custom_scripts.switch_case()<CR>', {noremap = true, silent = true})
