@@ -72,7 +72,6 @@ return {
           "phpactor",
           "htmx",
           "jsonls",
-          "csharp_ls",
         },
         handlers = {
           function(server_name) -- default handler (optional)
