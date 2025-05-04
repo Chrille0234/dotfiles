@@ -63,7 +63,7 @@ return {
           "rust_analyzer",
           "gopls",
           "clangd",
-          "tsserver",
+          "ts_ls",
           "html",
           "cssls",
           "svelte",
