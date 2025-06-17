@@ -1,43 +1,15 @@
 return {
-  {
-    "nvim-telescope/telescope.nvim",
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
 
-    tag = "0.1.5",
+    opts = {},
 
-    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function ()
+     local fzf = require("fzf-lua")
 
-    config = function()
-      require("telescope").setup({
-        defaults = {
-          layout_config = {
-            vertical = {
-              width = 0.8,
-              height = 0.8,
-              preview_height = 0.6,
-              preview_width = 0.9,
-            },
-          },
-          border = true,
-          borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-          preview = {
-            lines = 10,
-            winblend = 0,
-            number = true,
-          }
-        },
-      })
-
-      local builtin = require("telescope.builtin")
-
-      vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-      vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-      vim.keymap.set('n', '<leader>ps', function()
-        builtin.grep_string({ search = vim.fn.input("Grep > ") })
-      end)
+      vim.keymap.set("n", "<leader>ff", fzf.files)
+      vim.keymap.set("n", "<leader>/", fzf.live_grep)
+      vim.keymap.set("n", "<leader>fr", fzf.lsp_references)
+      vim.keymap.set("n", "<leader>fch", fzf.command_history)
     end
-
-  },
-  {
-    "tpope/vim-rhubarb"
-  }
 }

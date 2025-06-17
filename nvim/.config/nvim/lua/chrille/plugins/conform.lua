@@ -16,7 +16,7 @@ return {
         json = { "prettier" },
         csharp = { "csharpier" },
       },
-      vim.keymap.set({ "v"}, "=", function()
+      vim.keymap.set({ "v" }, "=", function()
         conform.format({
           lsp_fallback = true,
           async = false,
